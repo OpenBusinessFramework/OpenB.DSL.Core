@@ -1,6 +1,4 @@
 ﻿using NUnit.Framework;
-using System.Collections.Generic;
-using System.IO;
 
 namespace OpenB.DSL.Core.Test
 {
@@ -16,8 +14,7 @@ namespace OpenB.DSL.Core.Test
                 new TokenDefinition(@"[0-9]*", "Number"),
                 new TokenDefinition(@"'([A-Z]|[a-z]|[0-9]|_|-|\.)*'", "Literal"),                
                 new TokenDefinition(@"([A-Z]|[a-z]|[0-9]|_|-|\.)*", "Node"),
-                new TokenDefinition(@"@([A-Z]|[a-z]|[0-9]|_|-|\.)*", "Attribute"),
-                
+                new TokenDefinition(@"@([A-Z]|[a-z]|[0-9]|_|-|\.)*", "Attribute"),                
                 new TokenDefinition(@"\s(and|or)\s", "LogicalOperator"),
                 new TokenDefinition(@"\[","ConditionStart"),
                 new TokenDefinition(@"\]","ConditionEnd"),
